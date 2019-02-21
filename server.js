@@ -73,7 +73,6 @@ app.use(async (req, res, next) => {
   res.locals.numberWithCommas = function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
-
   next();
 });
 //connect to db
