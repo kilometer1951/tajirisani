@@ -1,0 +1,110 @@
+
+<header>
+    <div class="container">
+        <!-- top nav -->
+        <nav class="top_nav d-flex pt-3 pb-1">
+            <!-- logo -->
+            <h1>
+                <a class="navbar-brand" href="/">TSani
+                </a>
+            </h1>
+            <!-- //logo -->
+            <div class="w3ls_right_nav ml-auto d-flex">
+                <!-- search form -->
+
+                <form class="nav-search form-inline my-0 form-control" action="#" method="post">
+                    <select class="form-control input-lg" name="category" id="cat_id">
+                        <option >Hi <b><%= user ? user.name + " Search our store": "Search our store"%></b> </option>
+                        <optgroup label="Mens">
+                          <%productsMen_1.forEach(function(product) {%>
+                            <option value="<%=product._id%>" ><%= product.product_name%></option>
+                            <% }) %>
+                        </optgroup>
+                        <optgroup label="Womens">
+                          <%productsWomen_1.forEach(function(product) {%>
+                            <option value="<%=product._id%>" ><%= product.product_name%></option>
+                            <% }) %>
+                        </optgroup>
+                        <optgroup label="Girls">
+                          <%productsGirls_1.forEach(function(product) {%>
+                            <option value="<%=product._id%>" ><%= product.product_name%></option>
+                            <% }) %>
+                        </optgroup>
+                        <optgroup label="Boys">
+                          <%productsBoys_1.forEach(function(product) {%>
+                            <option value="<%=product._id%>" ><%= product.product_name%></option>
+                            <% }) %>
+                        </optgroup>
+                    </select>
+                    <!-- <input class="btn btn-outline-secondary  ml-3 my-sm-0" type="submit" value="Search"> -->
+                </form>
+                <!-- search form -->
+                <div class="nav-icon d-flex">
+                    <!-- sigin and sign up -->
+                    <% if(!user) {%>
+                    <a class="text-dark login_btn align-self-center mx-3" href="#myModal_btn" data-toggle="modal" data-target="#myModal_btn">
+                            <i class="far fa-user"></i>
+                        </a>
+                    <% } else { %>
+                        <a  class="text-dark login_btn align-self-center mx-3" onclick=" window.location.href ='/api/logout'" style="cursor: pointer;">
+                                <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                        <% }%>
+                    <!-- sigin and sign up -->
+                    <!-- shopping cart -->
+                    <% if(user) { %>
+
+                                        <button class="btn "   style="margin-right:5px;" onclick="open_cart()">
+                                            <span  class="badge1 cartNumber" data-badge="<%=cartCheckout_number.length === 0 ? "0": cartCheckout_number[0].items.length %>" ><i class="fa fa-shopping-cart"></i></span>
+                                        </button>
+                                        <!-- <button class="btn "  >
+                                                <span  class="badge1 notificationNumber" data-badge="40" ><i class="fa fa-bell"></i></span>
+                                        </button> -->
+                                        <%- user.isAdmin ?
+                                                 `<button class="btn "  onclick="window.location.href = '/admin'" ><i class="fa fa-lock"></i></button>` : ""%>
+
+                        <% }%>
+                    <!-- //shopping cart ends here -->
+                </div>
+            </div>
+        </nav>
+        <!-- //top nav -->
+        <!-- bottom nav -->
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item" style="margin-right:10px;">
+                        <a class= "<%= page === "home" ? "nav-link active" : "nav-link "%>" href="/" >Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin-right:10px;">
+                            <a class="<%= page === "shop" ? "nav-link active" : "nav-link "%>" href="/shop"> Shop</a>
+
+                        </li>
+
+
+                  <% if(user) {%>
+                    <li class="nav-item" style="margin-right:10px;">
+                        <a class="<%= page === "invoice" ? "nav-link active" : "nav-link "%>"  href="/invoice">Invoice</a>
+                    </li>
+                    <% } %>
+                    <li class="nav-item" style="margin-right:10px;">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="<%= page === "contact" ? "nav-link active" : "nav-link "%>" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- //bottom nav -->
+    </div>
+    <!-- //header container -->
+</header>
+<!-- //header -->
+<div id="toast"><div id="img"><i class="fas fa-check"></i></div><div id="desc">Cart Updated</div></div>

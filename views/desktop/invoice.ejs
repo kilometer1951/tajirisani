@@ -1,0 +1,36 @@
+<% include ../partials/header_desktop %>
+<h5 class="head_agileinfo text-center text-capitalize pb-5">
+    <span>I</span>nvoice</h5>
+
+<div class="container">
+  <div class="row">
+        <% getCart.forEach(function(cart){ %>
+        <div class="col-md-4" >
+          <div style="background-color:#3F729B;color:white;">
+            <div style="padding:8px;">
+              <h4>Shipping Status: <%= !cart.orderShipped ? "Pending": "Shipped"%></h4>
+            </div>
+          </div>
+            <div style="margin-bottom:20px;padding:10px;box-shadow: 3px 4px 12px 0 rgba(0, 0, 0, 0.17);text-align:center;" >
+              <ul>
+                <% cart.items.forEach(function(product){ %>
+                  <li id="r<%=product.products._id%>"><%= product.products.product_name%>
+                      <i>-</i>
+                      <span>$<span id="otherprice<%=product.products._id%>" class="invoice_prices<%=product.products._id%>"><%= product.price%></span></span>
+                  </li>
+                  <%})%>
+                  <li>Total
+                      <i>-</i>
+                      <span>$<span><%= numberWithCommas(cart.totalPrice)%></span></span>
+                  </li>
+                  <li style="color:#0d47a1;">Shipping Cost
+                    <i>- </i>
+                    <span>Free</span>
+                  </li>
+              </ul>
+            </div>
+        </div>
+        <%})%>
+
+  </div>
+</div>

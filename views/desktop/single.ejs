@@ -1,0 +1,124 @@
+<% include ../partials/header_desktop %>
+
+<!-- Single -->
+   <div class="innerf-pages section py-5">
+       <div class="container">
+           <div class="row my-sm-5">
+               <div class="col-lg-4 single-right-left">
+                   <div class="grid images_3_of_2">
+                       <div class="flexslider1">
+                           <ul class="slides">
+                               <li data-thumb="/images/products/<%= product.image1%>">
+                                   <div class="thumb-image">
+                                       <img src="/images/products/<%= product.image1%>" data-imagezoom="true" alt=" " class="img-fluid"> </div>
+                               </li>
+                               <li data-thumb="/images/products/<%= product.image2%>">
+                                   <div class="thumb-image">
+                                       <img src="/images/products/<%= product.image2%>" data-imagezoom="true" alt=" " class="img-fluid"> </div>
+                               </li>
+                               <li data-thumb="/images/products/<%= product.image3%>">
+                                   <div class="thumb-image">
+                                       <img src="/images/products/<%= product.image3%>" data-imagezoom="true" alt=" " class="img-fluid"> </div>
+                               </li>
+                           </ul>
+                           <div class="clearfix"></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-8 mt-lg-0 mt-5 single-right-left simpleCart_shelfItem">
+                   <h3><%= product.product_name%></h3>
+                   <div class="caption" style="margin-top:20px;">
+
+                       <div class="clearfix"> </div>
+                       <h6>
+                           $<%= product.price%>
+                           <span id="product_price<%=product._id%>"></span>
+                         </h6>
+                   </div>
+                   <div class="desc_single">
+                       <h5>Description</h5>
+                       <p><%= product.description%></p>
+                   </div>
+                   <div class="d-sm-flex justify-content-between">
+
+                       <div class="color-quality mt-sm-0 mt-4">
+                           <h5 class="sp_title mb-3">services</h5>
+                           <ul class="single_serv">
+                               <li>
+                                   <a href="#">30 Day Return Policy</a>
+                               </li>
+                               <li class="mt-2">
+                                   <a href="#">Free Shipping</a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+
+                   <div class="occasion-cart" style="margin-top:20px;">
+
+                       <button type="submit" class="hub-cart phub-cart btn addToCart" id="<%= product._id%>" >
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!-- /new_arrivals -->
+   <div class="section singlep_btm pb-5">
+       <div class="container">
+           <div class="new_arrivals">
+               <h4 class="rad-txt text-capitalize">you may also be interested in
+               </h4>
+               <!-- card group 2 -->
+               <div class="card-group my-5">
+                   <!-- card -->
+                   <% moreProducts.forEach(function(product) { %>
+                   <div class="col-lg-3 col-sm-6 p-0">
+                       <div class="card product-men p-3">
+                           <div class="men-thumb-item">
+                               <img src="/images/products/<%= product.image1%>" alt="img" class="card-img-top">
+                               <div class="men-cart-pro">
+                                   <div class="inner-men-cart-pro">
+                                       <a href="/product/single/<%= product._id%>" class="link-product-add-cart">Quick View</a>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- card body -->
+                           <div class="card-body  py-3 px-2">
+                               <h5 class="card-title text-capitalize"><%= product.product_name%></h5>
+                               <div class="card-text d-flex justify-content-between">
+                                   <p class="text-dark font-weight-bold" id="product_price<%=product._id%>"><%= product.price%></p>
+                                   <p class="line-through"><%= product.prev_price%></p>
+                               </div>
+                           </div>
+                           <!-- card footer -->
+                           <div class=" card-footer ">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div style="float:left;">
+                                        <span style="color:#ff7043"><%= product.discount ? product.discount + "% OFF" : "" %></span>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div style="float:right">
+                                        <button type="submit" class="hub-cart phub-cart btn addToCart" id="<%= product._id%>">
+                                          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                       </div>
+                   </div>
+                   <% }) %>
+                   <!-- //card -->
+
+
+               </div>
+               <!-- //card group -->
+               <!--//new_arrivals-->
+           </div>
+       </div>
+   </div>
+   <!--// Single -->

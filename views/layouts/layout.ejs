@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Tajiri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Fashion Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/css/flexslider.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/css/checkout.css" type="text/css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+
+    <!-- shop css -->
+    <link href="/css/shop.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <!-- Owl-Carousel-CSS -->
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="/css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <!-- //online-fonts -->
+</head>
+
+<body>
+
+
+
+    <%- body %>
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footerv2-w3ls">
+            <div class="footer-w3lagile-innerr">
+                <!-- footer-top -->
+
+                <!-- //footer-top -->
+                <div class="footer-bottomv2 py-5">
+                    <div class="container">
+                        <ul class="bottom-links-agile">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about">About Us</a>
+                            </li>
+                            <li>
+                                <a href="/shop">Shop</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
+
+                        </ul>
+                        <h3 class="text-center follow">Follow Us</h3>
+                        <ul class="social-iconsv2 agileinfo">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5 footer-copy_w3ls">
+                <div class="d-lg-flex justify-content-between">
+                    <div class="mt-2 sub-some align-self-lg-center">
+                        <h5>Payment Method</h5>
+                        <ul class="mt-4">
+                            <li class="list-inline-item">
+                                <img src="/images/pay2.png" alt="">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="/images/pay5.png" alt="">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="/images/pay3.png" alt="">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="/images/pay7.png" alt="">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="/images/pay8.png" alt="">
+                            </li>
+                            <li class="list-inline-item ">
+                                <img src="/images/pay9.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cpy-right align-self-center">
+                        <h2 class="agile_btxt">
+                            <a href="/">
+                                <span>j</span>ewelry
+                                <span>h</span>ub</a>
+                        </h2>
+                        <p>© 2019 Jewelry Hub. All rights reserved | Design by
+                            <a href="#" class="text-secondary"> Wilson Serge.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- sign up Modal -->
+    <div class="modal fade" id="myModal_btn" tabindex="-1" role="dialog" aria-labelledby="myModal_btn" aria-hidden="true">
+        <div class="agilemodal-dialog modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register Now</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body pt-3 pb-5 px-sm-5">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto align-self-center">
+                            <img src="/images/p3.png" class="img-fluid" alt="login_image" />
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                            <span id="error_sign" class="error_sign" style="color: #e57373;"></span>
+
+                                <div class="form-group">
+                                    <label for="recipient-name1" class="col-form-label">Your Name</label>
+                                    <input type="text" class="form-control name" placeholder=" " name="name" id="recipient-name1" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-email" class="col-form-label">Email</label>
+                                    <input type="email" class="form-control email_signup" placeholder=" " name="email_signup" id="recipient-email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password1" class="col-form-label">Password</label>
+                                    <input type="password" class="form-control pass_signup" placeholder=" " name="pass_signup" id="pass_signup" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password2" class="col-form-label">Confirm Password</label>
+                                    <input type="password" class="form-control cpass_signup" placeholder=" " name="cpass_signup" id="cpass_signup" required="">
+                                </div>
+                                <div class="sub-w3l">
+                                    <div class="sub-agile">
+                                        <input type="checkbox" id="brand2" value="">
+                                        <label for="brand2" class="mb-3">
+                                            <span></span>I Accept to the Terms & Conditions</label>
+                                    </div>
+                                </div>
+                                <div class="right-w3l">
+                                    <input type="submit" class="form-control signin_btn" value="Register">
+                                </div>
+                            </form>
+                            <p class="text-center mt-3">Already a member?
+                                <a href="#" data-toggle="modal" data-target="#exampleModal1" class="text-dark login_btn">
+                                    Login Now</a>
+                            </p>
+                            <p class="text-center mt-3">
+                                OR
+                            </p>
+                            <div class="right-w3l" style="text-align:center;" >
+                                <button class="loginBtn loginBtn--facebook" onclick="window.location.href='/auth/facebook'">
+                                    Login with Facebook
+                                   </button>
+                                   <button class="loginBtn loginBtn--google" onclick="window.location.href='/auth/google'">
+                                    Login with Google
+                                   </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //signup modal -->
+    <!-- signin Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1" aria-hidden="true">
+        <div class="agilemodal-dialog modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body  pt-3 pb-5 px-sm-5">
+                    <div class="row">
+                        <div class="col-md-6 align-self-center">
+                            <img src="/images/p3.png" class="img-fluid" alt="login_image" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <form >
+                                    <span id="error" class="error" style="color: #e57373;"></span>
+                                <div class="form-group">
+
+                                    <label for="recipient-name" class="col-form-label">Email</label>
+                                    <input type="email" class="form-control email_login" placeholder=" " name="email_login" id="recipient-name" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Password</label>
+                                    <input type="password" class="form-control pass_login" placeholder=" " name="pass_login" required="">
+                                </div>
+                                <div class="right-w3l">
+                                    <input type="submit" class="form-control login_btn_" value="Login">
+                                </div>
+                            </form>
+                            <p class="text-center mt-3">
+                                    OR
+                                </p>
+                                <div class="right-w3l" style="text-align:center;">
+                                    <button class="loginBtn loginBtn--facebook" onclick="window.location.href='/auth/facebook'">
+                                        Login with Facebook
+                                       </button>
+                                       <button class="loginBtn loginBtn--google" onclick="window.location.href='/auth/google'">
+                                        Login with Google
+                                       </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+.cart_data {
+    background-color: #fff;
+    position: relative;
+    top:0;
+    right: 0;
+    margin-top: 19vh;
+    position: fixed;
+    z-index: 10;
+    margin-right: 5vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    padding: 10px;
+    width:85vh;
+    display: none;
+
+
+}
+
+.content {
+  height: 30vh;
+  overflow-x: hidden;
+  overflow-y: auto
+}
+.delete_cartitem {
+  float:right;
+  color:black;
+  cursor: pointer;
+}
+.increment_qty {
+  background-color: white;
+  border:1px solid black;
+  cursor:pointer;
+  transition: 0.4s;
+
+}
+
+.increment_qty:hover {
+    background-color: #0d47a1;
+    color:white;
+}
+
+.decrement_qty {
+  background-color: white;
+  border:1px solid black;
+
+  cursor:pointer;
+  transition: 0.4s;
+
+}
+
+.decrement_qty:hover {
+    background-color: #ec407a;
+    color:white;
+}
+</style>
+
+    <div class=container-fluid>
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="cart_data">
+                      <div class="col-md-12" style="margin-bottom:25px;">
+                        <div style="float:left;cursor: pointer;" class="close_cartbtn">
+                         <span onclick="close_cart()">X</span>
+                          </div>
+                        </div>
+                            <div class="content">
+
+                              <div class="container-fluid">
+                                <div class="col-md-12 loading_bar" style="text-align:center;margin-top:7vh;display:none;">
+                                  <img src="https://loading.io/spinners/liquid/lg.liquid-fill-preloader.gif" width="100" height="100" />
+                                </div>
+                                <div class="col-md-12 noitems" style="text-align:center;margin-top:7vh;display:none;color:#9e9e9e;">
+                                  <h2 style="font-family: 'Lora', serif;"><i class="fas fa-cart-plus"></i> Cart is Empty</h2>
+                                </div>
+
+                                    <div class="cart_content"></div>
+
+                               </div>
+                            </div>
+                           <div class="col-md-12 checkout_btn" style="margin-bottom: 10px;padding: 10px;display:none;">
+                               <button class="btn btn-dark" onclick="window.location.href='/product/checkout'" style="float:left">Checkout</button>
+                               <span  style="float:right; font-size:19px;color:#3F729B;" class="cartTotal"></span>
+                           </div>
+
+                      </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signin Modal -->
+    <!-- js -->
+    <script src="/js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!-- script for show signin and signup modal -->
+    <% if(!user) {%>
+    <script>
+        $(document).ready(function () {
+            $("#myModal_btn").modal();
+        });
+    </script>
+
+    <% }%>
+    <!-- //script for show signin and signup modal -->
+    <!-- smooth dropdown -->
+    <script>
+        $(document).ready(function () {
+            $('ul li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+            });
+        });
+    </script>
+    <!-- //smooth dropdown -->
+
+    <!-- FlexSlider -->
+   <script src="/js/jquery.flexslider.js"></script>
+   <script>
+       // Can also be used with $(document).ready()
+       $(window).load(function () {
+           $('.flexslider1').flexslider({
+               animation: "slide",
+               controlNav: "thumbnails"
+           });
+       });
+   </script>
+   <!-- //FlexSlider-->
+    <!-- script for password match -->
+    <!-- Banner Responsiveslides -->
+    <script src="/js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: false,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!-- // Banner Responsiveslides -->
+    <!-- Product slider Owl-Carousel-JavaScript -->
+    <script src="/js/owl.carousel.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 4,
+            loop: false,
+            margin: 10,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            responsive: {
+                320: {
+                    items: 1,
+                },
+                568: {
+                    items: 2,
+                },
+                991: {
+                    items: 3,
+                },
+                1050: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+    <!-- //Product slider Owl-Carousel-JavaScript -->
+    <!-- cart-js -->
+    <script src="/js/minicart.js">
+    </script>
+    <script>
+        hub.render();
+
+        hub.cart.on('new_checkout', function (evt) {
+            var items, len, i;
+
+            if (this.subtotal() > 0) {
+                items = this.items();
+
+                for (i = 0, len = items.length; i < len; i++) {}
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+    <!-- start-smooth-scrolling -->
+    <script src="/js/move-top.js"></script>
+    <script src="/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="/js/SmoothScroll.min.js"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/imagezoom.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/addToCart.js"></script>
+
+</body>
+
+</html>

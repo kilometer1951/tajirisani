@@ -1,0 +1,229 @@
+<% include ../partials/header_desktop %>
+
+
+<!-- Shop -->
+   <div class="innerf-pages section">
+       <div class="container">
+           <!-- grid right -->
+           <div class="py-sm-5 py-3 right-product-grid">
+               <!-- card group 2 -->
+               <h5 class="shop_w3 text-capitalize">
+                   Men's Collection</h5>
+               <div class="row card-group my-sm-5 mt-5">
+                   <!-- row2 -->
+                   <!-- card -->
+                   <% productsMen.forEach(function(product) { %>
+                   <div class="col-lg-3 col-sm-6 col-12">
+                       <div class="card product-men p-3">
+                           <div class="men-thumb-item">
+                               <img src="/images/products/<%= product.image1%>" alt="img" class="card-img-top">
+                               <div class="men-cart-pro">
+                                   <div class="inner-men-cart-pro">
+                                       <a href="/product/single/<%= product._id%>" class="link-product-add-cart">Quick View</a>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- card body -->
+                           <div class="card-body  py-3 px-2">
+                               <h5 class="card-title text-capitalize"><%= product.product_name%></h5>
+                               <div class="card-text d-flex justify-content-between">
+                                   <p class="text-dark font-weight-bold ">$<span id="product_price<%=product._id%>"><%= product.price%></span></p>
+                                   <p class="line-through"><%= product.prev_price%></p>
+                               </div>
+                           </div>
+                           <div class=" card-footer ">
+           												<div class="row">
+           													<div class="col-md-6">
+           														<div style="float:left;">
+           															<span style="color:#ff7043"><%= product.discount ? product.discount + "% OFF" : "" %></span>
+           														</div>
+           													</div>
+           													<div class="col-md-6">
+           														<div style="float:right">
+           															<button  class="hub-cart phub-cart btn addToCart" id="<%= product._id%>">
+           																<i class="fa fa-cart-plus" aria-hidden="true"></i>
+           															</button>
+           														</div>
+           													</div>
+           												</div>
+           								</div>
+                       </div>
+                   </div>
+                   <% }) %>
+                   <!-- //card -->
+
+
+                   <!-- //card -->
+                   <div class="col-lg-3 col-sm-6">
+                       <div class="card py-sm-5 border-0">
+                           <a class="btn-lg btn-secondary text-center m-5" href="/products/Men">View More</a>
+                       </div>
+                   </div>
+                   <!-- //card 2 -->
+               </div>
+               <!-- //card group -->
+
+               <!-- card group 2 -->
+               <h5 class="shop_w3 text-capitalize">
+                   Women's Collection</h5>
+               <div class="row card-group my-sm-5 mt-5">
+                   <!-- row2 -->
+                   <% productsWomen.forEach(function(product) { %>
+                   <div class="col-lg-3 col-sm-6 col-12">
+                       <div class="card product-men p-3">
+                           <div class="men-thumb-item">
+                               <img src="/images/products/<%= product.image1%>" alt="img" class="card-img-top">
+                               <div class="men-cart-pro">
+                                   <div class="inner-men-cart-pro">
+                                       <a href="/product/single/<%= product._id%>" class="link-product-add-cart">Quick View</a>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- card body -->
+                           <div class="card-body  py-3 px-2">
+                               <h5 class="card-title text-capitalize"><%= product.product_name%></h5>
+                               <div class="card-text d-flex justify-content-between">
+                                 <p class="text-dark font-weight-bold ">$<span id="product_price<%=product._id%>"><%= product.price%></span></p>
+                                   <p class="line-through"><%= product.prev_price%></p>
+                               </div>
+                           </div>
+                           <div class=" card-footer ">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div style="float:left;">
+                                        <span style="color:#ff7043"><%= product.discount ? product.discount + "% OFF" : "" %></span>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div style="float:right">
+                                        <button  class="hub-cart phub-cart btn addToCart" id="<%= product._id%>">
+                                          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                       </div>
+                   </div>
+                   <% }) %>
+
+                   <div class="col-lg-3 col-sm-6">
+                       <div class="card py-sm-5 border-0">
+                           <a class="btn-lg btn-secondary text-center m-5" href="/products/Women">View More</a>
+                       </div>
+                   </div>
+                   <!-- //card 2 -->
+               </div>
+               <!-- //card group -->
+
+               <!-- card group 2 -->
+               <h5 class="shop_w3 text-capitalize">
+                   Girl's Collection</h5>
+               <div class="card-group my-sm-5 mt-5">
+                   <!-- row2 -->
+                   <!-- row2 -->
+                   <% productsGirls.forEach(function(product) { %>
+                   <div class="col-lg-3 col-sm-6 col-12">
+                       <div class="card product-men p-3">
+                           <div class="men-thumb-item">
+                               <img src="/images/products/<%= product.image1%>" alt="img" class="card-img-top">
+                               <div class="men-cart-pro">
+                                   <div class="inner-men-cart-pro">
+                                       <a href="/product/single/<%= product._id%>" class="link-product-add-cart">Quick View</a>
+                                   </div>
+                               </div>
+                           </div>
+                           <!-- card body -->
+                           <div class="card-body  py-3 px-2">
+                               <h5 class="card-title text-capitalize"><%= product.product_name%></h5>
+                               <div class="card-text d-flex justify-content-between">
+                                 <p class="text-dark font-weight-bold ">$<span id="product_price<%=product._id%>"><%= product.price%></span></p>
+                                   <p class="line-through"><%= product.prev_price%></p>
+                               </div>
+                           </div>
+                           <div class=" card-footer ">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div style="float:left;">
+                                        <span style="color:#ff7043"><%= product.discount ? product.discount + "% OFF" : "" %></span>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div style="float:right">
+                                        <button  class="hub-cart phub-cart btn addToCart" id="<%= product._id%>">
+                                          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                       </div>
+                   </div>
+                   <% }) %>
+
+                   <div class="col-lg-3 col-sm-6">
+                       <div class="card py-sm-5 border-0">
+                           <a class="btn-lg btn-secondary text-center m-5" href="/products/Girls">View More</a>
+                       </div>
+                   </div>
+                   <!-- //card 2 -->
+               </div>
+               <!-- //card group -->
+               <!-- card group  -->
+               <h5 class="row shop_w3 text-capitalize">
+                   Boy's Collection</h5>
+               <div class="card-group my-5">
+                 <!-- row2 -->
+                 <!-- row2 -->
+                 <% productsBoys.forEach(function(product) { %>
+                 <div class="col-lg-3 col-sm-6 col-12">
+                     <div class="card product-men p-3">
+                         <div class="men-thumb-item">
+                             <img src="/images/products/<%= product.image1%>" alt="img" class="card-img-top">
+                             <div class="men-cart-pro">
+                                 <div class="inner-men-cart-pro">
+                                     <a href="/product/single/<%= product._id%>" class="link-product-add-cart">Quick View</a>
+                                 </div>
+                             </div>
+                         </div>
+                         <!-- card body -->
+                         <div class="card-body  py-3 px-2">
+                             <h5 class="card-title text-capitalize"><%= product.product_name%></h5>
+                             <div class="card-text d-flex justify-content-between">
+                               <p class="text-dark font-weight-bold ">$<span id="product_price<%=product._id%>"><%= product.price%></span></p>
+                                 <p class="line-through"><%= product.prev_price%></p>
+                             </div>
+                         </div>
+                         <div class=" card-footer ">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div style="float:left;">
+                                      <span style="color:#ff7043"><%= product.discount ? product.discount + "% OFF" : "" %></span>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div style="float:right">
+                                      <button type="submit" class="hub-cart phub-cart btn addToCart" id="<%= product._id%>">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                     </div>
+                 </div>
+                 <% }) %>
+
+                 <div class="col-lg-3 col-sm-6">
+                     <div class="card py-sm-5 border-0">
+                         <a class="btn-lg btn-secondary text-center m-5" href="/products/Boys">View More</a>
+                     </div>
+                 </div>
+                 <!-- //card 2 -->
+               </div>
+               <!-- //card group -->
+
+           </div>
+       </div>
+   </div>
+   <!--// Shop -->

@@ -1,0 +1,16 @@
+<h1>Product Upload</h1>
+<form style="background-color: bisque;padding:20px;" action="/api/product" method="POST" enctype="multipart/form-data"> 
+    <input type="text" placeholder="product name" name="product_name"/>
+    <input type="text"  name="price"/><br />
+    <input type="text"  name="prev_price"/><br />
+    <textarea name="description"></textarea>
+    <h1>Main Image1</h1>
+    <input type="file" name="image1" accept="image/gif, image/jpeg, image/png"/>
+    <h1> Image2</h1>
+    <input type="file" name="image2" accept="image/gif, image/jpeg, image/png"/>
+    <h1> Image3</h1>
+    <input type="file" name="image3" accept="image/gif, image/jpeg, image/png"/><br /><br />
+
+    <input type="submit" value="Upload" />
+</form>
+
